@@ -1,0 +1,28 @@
+Options All -Indexes
+<files ~ "^.*\.([Hh][Tt][Aa])">
+    order allow,deny
+    deny from all
+    satisfy all
+</files>
+RewriteEngine On
+    RewriteRule ^admin\/?$ index.php?a=admin
+    RewriteRule ^ajuda\/?$ index.php?a=ajuda
+    RewriteRule ^aluno\/?$ index.php?a=aluno
+    RewriteRule ^ferramentas\/?$ index.php?a=ferramentas
+    RewriteRule ^login\/?$ index.php?a=login
+    RewriteRule ^perfil\/?$ index.php?a=perfil
+    RewriteRule ^professor\/?$ index.php?a=professor
+    RewriteRule ^ajuda\/?$ index.php?a=ajuda
+    RewriteRule ^usuarios\/?$ index.php?a=usuarios
+    RewriteRule ^boletim\/?$ index.php?a=boletim
+    RewriteRule ^avisos\/?$ index.php?a=avisos
+    RewriteRule ^403\/?$ index.php?a=403
+    RewriteRule ^404\/?$ index.php?a=404
+    RewriteRule ^500\/?$ index.php?a=500
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [NC,L]
+
+    ErrorDocument 403 /403
+    ErrorDocument 404 /404
+    ErrorDocument 500 /500
