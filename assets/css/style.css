@@ -187,7 +187,7 @@ iframe {
     border-radius: var(--br);
 }
 .texto-sobre-imagem .box-options .content {
-    background-color: rgba(0, 0, 0, .7);
+    background: var(--background-transparent);
     border-radius: var(--br);
     position: absolute;
     text-align: center;
@@ -198,7 +198,7 @@ iframe {
     height: 100%;
 }
 .texto-sobre-imagem .box-options .content a {
-    color: #fffffe;
+    color: var(--button-text);
     position: absolute;
     display: flex;
     align-items: center;
@@ -210,7 +210,7 @@ iframe {
 }
 .texto-sobre-imagem .box-options .content a:hover {
     border: var(--border-color) 4px solid;
-    color: #fffffe;
+    color: var(--button-text);
 }
 @media screen and (min-width: 768px) {
     /* .texto-sobre-imagem .box-options {
